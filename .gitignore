@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Códigos de entorno
+.env
+
+# Dependencias
+/.venv
+/lib/
+/lib64/
+/bin/
+/include/
+/share/
+/pyvenv.cfg
+
+# Archivos de registro y datos
+*.log
+*.sql
+*.sqlite3
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+ENV.bak/
+
