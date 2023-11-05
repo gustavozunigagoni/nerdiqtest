@@ -1,0 +1,11 @@
+prefix=/Users/gustavozunigagoni/Desktop/MISCARPETAS/MISDESARROLLOS/Python/nerdiqtest/.conda
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/Users/gustavozunigagoni/Desktop/MISCARPETAS/MISDESARROLLOS/Python/nerdiqtest/.conda/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.2
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}
