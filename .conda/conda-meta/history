@@ -1,0 +1,18 @@
+==> 2023-11-04 23:31:00 <==
+# cmd: /Users/gustavozunigagoni/opt/anaconda3/lib/python3.9/site-packages/conda/__main__.py create --yes --prefix .conda python=3.8
+# conda version: 4.14.0
++conda-forge/noarch::pip-23.3.1-pyhd8ed1ab_0
++conda-forge/noarch::setuptools-68.2.2-pyhd8ed1ab_0
++conda-forge/noarch::wheel-0.41.3-pyhd8ed1ab_0
++conda-forge/osx-64::bzip2-1.0.8-h0d85af4_4
++conda-forge/osx-64::ca-certificates-2023.7.22-h8857fd0_0
++conda-forge/osx-64::libffi-3.4.2-h0d85af4_5
++conda-forge/osx-64::libsqlite-3.44.0-h92b6c6a_0
++conda-forge/osx-64::libzlib-1.2.13-h8a1eda9_5
++conda-forge/osx-64::ncurses-6.4-h93d8f39_2
++conda-forge/osx-64::openssl-3.1.4-hd75f5a5_0
++conda-forge/osx-64::python-3.8.18-h5ba8234_0_cpython
++conda-forge/osx-64::readline-8.2-h9e318b2_1
++conda-forge/osx-64::tk-8.6.13-hef22860_0
++conda-forge/osx-64::xz-5.2.6-h775f41a_0
+# update specs: ['python=3.8']
