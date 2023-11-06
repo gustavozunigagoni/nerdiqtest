@@ -1,33 +1,29 @@
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-import getpass
-import keyring
 import flet as ft
-
-
-import os 
-from dotenv import load_dotenv
+from flask import Flask
 
 from notificaciones import smtp
-from seguridad import savepass
+import config as cf
+from apis.user import user
+from apis.root import root
 
-# Carga las variables de archivo .env en el entorno
-email_remitente = os.getenv("EMAIL_REMITENTE")
+# Codigo para inicializar la aplicacion de Flask y rutas
 
+app = Flask(__name__)
 
-#def main(page: ft.Page):
-#    t = ft.Text(value="Hola mundo!", color="gree")
-#    page.controls.append(t)
-#    page.update()
+app.config['SECRET_KEY'] = cf.secret_key
 
-#ft.app(target=main)
+# Regristra blueprint del mantenimiento de usuario
+app.register_blueprint(user,url_prefix='/api/user')
+app.register_blueprint(root)
+
 
 if __name__ == "__main__":
 
     # Prueba de uso de administracion de password
-    print(savepass.obtener_contrasena("gmail","gustavo"))
-    print(savepass.borrar_contrasena("gmail","gustavo"))
-
-
+    #savepass.borrar_contrasena("gmail","gustavo")
+    
+    # Prueba de funcionamiento de modulo de smtp
+    #smtp.send_email(email=cf.email_username,password=cf.email_password,smtp=cf.email_server,port=cf.email_main_port,reciever_emails=["gustavozunigagoni@yahoo.com"],subject="Correo de prueba Gustavo 4",txt="Correo de pruebas 4")
+    
+    app.run(debug=True)
 
