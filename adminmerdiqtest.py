@@ -44,7 +44,6 @@ CREATE INDEX IF NOT EXISTS idx_email
     resultado = dbproc.dbexec("Creacion de tabla de users",script)
 
     script= f"""
-
 INSERT INTO public.users(
 	email, nombre, estado, rol, password)
 	VALUES ('{cf.user_admin}', 'Admin', 1, 1, '{cf.encriptar_password(cf.user_pass)}');
@@ -55,6 +54,7 @@ INSERT INTO public.users(
 
 if __name__ == "__main__":
     initdb()
+
 
 
 

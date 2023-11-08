@@ -4,6 +4,7 @@ import string
 
 from notificaciones import smtp
 import config as cf
+from database import userdb
 
 user = Blueprint('user', __name__)
 
@@ -16,14 +17,17 @@ def generate_confirmation_code():
 def register():
     data = request.get_json()
     email = data.get('email')
+    nombre = data.get('nombre')
     password = data.get('password')
-
+   
     # Verifica si el email ya está registrado
     if email in users:
         return jsonify({'error': 'Email already registered'}), 400
-
+    
     # Genera un código de confirmación y almacena el usuario en la base de datos simulada
     confirmation_code = generate_confirmation_code()
+    #userdb.adduser(email=email,nombre=nombre,password=cf.encriptar_password(password),confcod=confirmation_code)
+    
     users[email] = {'password': password, 'confirmed': False, 'confirmation_code': confirmation_code}
 
     # Envia el correo de confirmación
