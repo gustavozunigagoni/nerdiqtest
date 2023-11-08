@@ -1,5 +1,6 @@
 import os 
 from dotenv import load_dotenv
+import hashlib
 
 # Carga las variables del archivo .env en el entorno
 load_dotenv()
@@ -17,3 +18,15 @@ db_pg_database = os.getenv("DB_PG_DATABASE")
 db_pg_port = os.getenv("DB_PG_PORT")
 db_pg_user = os.getenv("DB_PG_USER")
 db_pg_password = os.getenv("DB_PG_PASSWORD")
+user_admin = os.getenv("USER_ADMIN")
+user_pass = os.getenv("USER_PASS")
+
+def encriptar_password(password):
+    # Crear un objeto de hash usando SHA-256
+    hasher = hashlib.sha256()
+    # Codificar el password como bytes y actualizar el hash con esos bytes
+    hasher.update(password.encode('utf-8'))
+    # Obtener el hash en formato hexadecimal
+    password_hash = hasher.hexdigest()
+    # Devolver el hash
+    return password_hash

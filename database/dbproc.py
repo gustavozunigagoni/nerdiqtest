@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2 import Error
 import config as cf
 
-def crear_tabla(tabla_nombre,create_query):
+def dbexec(descripcion,create_query):
     try:
         # Establecer la conexión a la base de datos
         connection = psycopg2.connect(
@@ -19,10 +19,12 @@ def crear_tabla(tabla_nombre,create_query):
         # Ejecutar el comando SQL
         cursor.execute(create_query)
         connection.commit()
-        print(f"Tabla '{tabla_nombre}' creada exitosamente.")
+        print(f"{descripcion}'")
+        return True, None
 
     except (Exception, Error) as error:
-        print("Error al crear la tabla:", error)
+        print("Error ejecutar proceso:", error)
+        return False, error
 
     finally:
         # Cerrar la conexión y el cursor
@@ -30,13 +32,3 @@ def crear_tabla(tabla_nombre,create_query):
             cursor.close()
             connection.close()
             print("Conexión cerrada.")
-
-# Ejemplo de uso
-nombre_tabla = input("Ingrese el nombre de la tabla a crear: ")
-crear_tabla(nombre_tabla, create_table_query = f'''
-            CREATE TABLE {tabla_nombre} (
-                id SERIAL PRIMARY KEY,
-                nombre VARCHAR(255),
-                edad INT
-            )
-        ''')
