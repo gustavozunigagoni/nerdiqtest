@@ -20,6 +20,10 @@ db_pg_user = os.getenv("DB_PG_USER")
 db_pg_password = os.getenv("DB_PG_PASSWORD")
 user_admin = os.getenv("USER_ADMIN")
 user_pass = os.getenv("USER_PASS")
+priv_key_path = os.getenv("PRIV_KEY_PATH")
+pub_key_path = os.getenv("PUB_KEY_PATH")
+exp_token_sec = int(os.getenv("EXP_TOKEN_SEC"))
+exp_token_register_sec = int(os.getenv("EXP_TOKEN_REGISTER_SEC"))
 
 def encriptar_password(password):
     # Crear un objeto de hash usando SHA-256

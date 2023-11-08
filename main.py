@@ -1,5 +1,5 @@
 import flet as ft
-from flask import Flask
+from quart import Quart
 
 import config as cf
 from apis.user import user
@@ -7,7 +7,7 @@ from apis.root import root
 
 # Codigo para inicializar la aplicacion de Flask y rutas
 
-app = Flask(__name__)
+app = Quart(__name__)
 
 app.config['SECRET_KEY'] = cf.secret_key
 

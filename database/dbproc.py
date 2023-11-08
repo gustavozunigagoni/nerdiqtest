@@ -2,7 +2,7 @@ import psycopg2
 from psycopg2 import Error
 import config as cf
 
-def dbexec(descripcion,create_query):
+async def dbexec(descripcion,create_query):
     try:
         # Establecer la conexión a la base de datos
         connection = psycopg2.connect(
