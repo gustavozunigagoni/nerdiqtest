@@ -24,6 +24,6 @@ if __name__ == "__main__":
     # Prueba de funcionamiento de modulo de smtp
     #smtp.send_email(email=cf.email_username,password=cf.email_password,smtp=cf.email_server,port=cf.email_main_port,reciever_emails=["gustavozunigagoni@yahoo.com"],subject="Correo de prueba Gustavo 4",txt="Correo de pruebas 4")
     
-    resultado = app.run(debug=True)
+    resultado = app.run(debug=True,host='192.168.0.109',port=5000)
 
 
