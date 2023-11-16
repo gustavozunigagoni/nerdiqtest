@@ -1,7 +1,7 @@
 # Mantenimiento de usuarios
 
 from database import dbproc
-import server.config as cf
+import config as cf
 
 async def adduser(email,nombre,password,confcod):
     script= f"""
