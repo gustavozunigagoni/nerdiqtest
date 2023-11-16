@@ -5,7 +5,7 @@ import string
 import logging
 
 from notificaciones import smtp
-import config as cf
+import server.config as cf
 from database import userdb
 from utils import tokens
 

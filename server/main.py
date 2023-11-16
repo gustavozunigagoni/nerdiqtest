@@ -1,7 +1,7 @@
 import flet as ft
 from quart import Quart
 
-import config as cf
+import server.config as cf
 from apis.user import user
 from apis.root import root
 

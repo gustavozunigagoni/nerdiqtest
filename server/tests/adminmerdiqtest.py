@@ -1,6 +1,6 @@
 # Aplicacion que tiene funciones administrativas y de inicializacion de sistema
 
-import config as cf
+import server.config as cf
 from database import dbproc
 
 def initdb():

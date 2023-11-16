@@ -3,7 +3,7 @@
 import jwt
 import datetime
 from cryptography.hazmat.primitives import serialization
-import config as cf
+import server.config as cf
 
 # Funcion para crear un token JWT usando un certificado de clave privada
 async def create_jwt_token(data,exp_token_sec):

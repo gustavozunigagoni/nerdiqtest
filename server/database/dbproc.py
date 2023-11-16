@@ -1,6 +1,6 @@
 import psycopg2
 from psycopg2 import Error
-import config as cf
+import server.config as cf
 
 async def dbexec(descripcion,create_query):
     try:
