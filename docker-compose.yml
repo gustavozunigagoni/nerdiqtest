@@ -1,19 +1,19 @@
 version: '3'
 
 services:
-  nerdiqtest-server:
+  nerdiqtestserver:
     build:
       context: ./server
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
     volumes:
-      - "./:/app"i
-  nerdiqtest-client:
+      - "./server:/app"
+  nerdiqtestclient:
     build:
       context: ./client
       dockerfile: Dockerfile
     ports:
       - "5001:5001"
     volumes:
-      - "./:/app"
+      - "./client:/app"

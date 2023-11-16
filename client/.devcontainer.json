@@ -1,0 +1,7 @@
+{
+  "name": "Nerdiqtest Client",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "nerdiqtestclient",
+  "shutdownAction": "none",
+  "workspaceFolder": "/app"
+}
