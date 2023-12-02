@@ -1,7 +1,0 @@
-{
-  "name": "Nerdiqtest Server",
-  "dockerComposeFile": ["../docker-compose.yml"],
-  "service": "nerdiqtestserver",
-  "shutdownAction": "none",
-  "workspaceFolder": "/app"
-}
