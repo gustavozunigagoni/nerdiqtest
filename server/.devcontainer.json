@@ -1,0 +1,16 @@
+{
+  "name": "Nerdiqtest Server",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "nerdiqtestserver",
+  "shutdownAction": "none",
+  "workspaceFolder": "/app",
+
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "aaron-bond.better-comments",
+    "njpwerner.autodocstring"
+  ]
+
+}
+
