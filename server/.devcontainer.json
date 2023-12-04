@@ -4,13 +4,15 @@
   "service": "nerdiqtestserver",
   "shutdownAction": "none",
   "workspaceFolder": "/app",
-
-  "extensions": [
-    "ms-python.python",
-    "ms-python.vscode-pylance",
-    "aaron-bond.better-comments",
-    "njpwerner.autodocstring"
-  ]
-
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "aaron-bond.better-comments",
+        "njpwerner.autodocstring",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
 }
 
