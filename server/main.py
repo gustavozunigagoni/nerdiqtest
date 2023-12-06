@@ -10,10 +10,10 @@ app = FastAPI()
 # Define una ruta para el endpoint raíz "/"
 @app.get("/")
 def read_root():
-    return {"mensaje": "¡Hola, mundo!"}
+    return {"mensaje": "¡Hola, mundo gzg!"}
 
 
 if __name__ == "__main__":
     import uvicorn
     
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=5000)
